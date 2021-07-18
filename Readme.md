@@ -1,3 +1,6 @@
+cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_C_FLAGS=-fembed-bitcode -DCMAKE_CXX_FLAGS=-std=c++11 -DOPENSSL_ROOT_DIR=/Users/vm/workspace/OpenSSL-for-iPhone -DOPENSSL_LIBRARIES=/Users/vm/workspace/OpenSSL-for-iPhone/lib -DCMAKE_OSX_ARCHITECTURES=arm64 -DCMAKE_OSX_SYSROOT=`xcode-select -print-path`/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS`xcodebuild -showsdks | grep iphoneos | egrep "[[:digit:]]+\.[[:digit:]]+" -o | tail -1`.sdk ./
+cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_C_FLAGS=-fembed-bitcode -DCMAKE_CXX_FLAGS=-std=c++11 -DOPENSSL_ROOT_DIR=PATH_TO_OPENSSL -DOPENSSL_LIBRARIES=PATH_TO_OPENSSL_X86/lib -DCMAKE_OSX_ARCHITECTURES=x86_64 ./
+
 # Repository info
 This repository should help everyone to build a staic c++ socket.io-client-cpp library for iOS and macOS. The library socket.io-client-cpp is maintained under https://github.com/socketio/socket.io-client-cpp. This library is needed for WebRTC frameworks as OWT https://github.com/open-webrtc-toolkit/owt-client-native 
 
